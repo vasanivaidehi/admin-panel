@@ -17,7 +17,7 @@ class Command(BaseCommand):
         # SubAdmin Permissions (Add + View)
         sub_permissions = Permission.objects.filter(
             content_type=content_type,
-            codename__in=['add_student', 'view_student']
+            codename__in=['add_student', 'view_student','delete_student']
         )
 
         subadmin_group.permissions.set(sub_permissions)
